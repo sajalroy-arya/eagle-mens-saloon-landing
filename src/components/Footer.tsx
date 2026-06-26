@@ -2,7 +2,6 @@
 
 import React from "react";
 
-// Custom SVG Brand Icons to bypass Lucide package version constraints
 const InstagramIcon = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 24 24"
@@ -50,28 +49,28 @@ const YoutubeIcon = ({ className }: { className?: string }) => (
 
 export default function Footer() {
   return (
-    <footer className="bg-[#111111] text-[#FAF8F5] pt-16 pb-24 md:pb-12 border-t border-white/5 relative z-10">
+    <footer className="bg-[#f5f5f7] text-[#1d1d1f] pt-16 pb-24 md:pb-12 border-t border-[#e5e5e7] relative z-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-sm font-light">
         
         {/* Column 1 - About & Socials */}
         <div className="space-y-4">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 rounded-full bg-[#FAF8F5] flex items-center justify-center border border-[#C8A76A]/20">
-              <span className="font-serif font-bold text-xs text-[#111111]">E</span>
+            <div className="w-8 h-8 rounded-full bg-[#1d1d1f] flex items-center justify-center border border-[#e5e5e7]">
+              <span className="font-sans font-extrabold text-xs text-white">E</span>
             </div>
-            <span className="font-serif text-lg font-bold tracking-widest text-white">
+            <span className="font-sans text-base font-extrabold tracking-tight text-[#1d1d1f]">
               EAGLE
             </span>
           </div>
-          <p className="text-stone-400 text-xs leading-relaxed max-w-sm">
-            Premium grooming for the modern gentleman. Elevating personal style through dedicated precision, details, and timeless craftsmanship in Jhansi.
+          <p className="text-[#76767b] text-xs leading-relaxed max-w-sm">
+            Minimalist grooming for the modern gentleman. Elevating personal style through precision, detail, and craftsmanship.
           </p>
-          <div className="flex space-x-3 pt-2">
+          <div className="flex space-x-2 pt-2">
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 border border-white/10 hover:border-[#C8A76A] rounded-lg transition text-stone-400 hover:text-[#C8A76A]"
+              className="p-2 border border-[#e5e5e7] hover:border-[#1d1d1f] hover:bg-[#eeeeef] rounded-lg transition text-[#76767b] hover:text-[#1d1d1f]"
               aria-label="Instagram Link"
             >
               <InstagramIcon className="w-4 h-4" />
@@ -80,7 +79,7 @@ export default function Footer() {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 border border-white/10 hover:border-[#C8A76A] rounded-lg transition text-stone-400 hover:text-[#C8A76A]"
+              className="p-2 border border-[#e5e5e7] hover:border-[#1d1d1f] hover:bg-[#eeeeef] rounded-lg transition text-[#76767b] hover:text-[#1d1d1f]"
               aria-label="Facebook Link"
             >
               <FacebookIcon className="w-4 h-4" />
@@ -89,7 +88,7 @@ export default function Footer() {
               href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 border border-white/10 hover:border-[#C8A76A] rounded-lg transition text-stone-400 hover:text-[#C8A76A]"
+              className="p-2 border border-[#e5e5e7] hover:border-[#1d1d1f] hover:bg-[#eeeeef] rounded-lg transition text-[#76767b] hover:text-[#1d1d1f]"
               aria-label="YouTube Link"
             >
               <YoutubeIcon className="w-4 h-4" />
@@ -99,39 +98,39 @@ export default function Footer() {
 
         {/* Column 2 - Operating Hours */}
         <div className="space-y-4">
-          <h4 className="font-serif font-bold text-stone-200 uppercase tracking-widest text-xs">Operating Hours</h4>
-          <div className="w-8 h-[1px] bg-[#C8A76A]" />
-          <ul className="space-y-2 text-stone-400 text-xs">
+          <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-[#1d1d1f]">Saloon Hours</h4>
+          <div className="w-8 h-[1px] bg-[#1d1d1f]" />
+          <ul className="space-y-2 text-[#76767b] text-xs">
             <li className="flex justify-between">
-              <span>Monday - Friday</span>
-              <span className="text-white font-medium">9:00 AM - 8:00 PM</span>
+              <span>Mon - Fri</span>
+              <span className="text-[#1d1d1f] font-semibold">9:00 AM - 8:00 PM</span>
             </li>
             <li className="flex justify-between">
               <span>Saturday</span>
-              <span className="text-white font-medium">9:00 AM - 6:00 PM</span>
+              <span className="text-[#1d1d1f] font-semibold">9:00 AM - 6:00 PM</span>
             </li>
             <li className="flex justify-between">
               <span>Sunday</span>
-              <span className="text-white font-medium">10:00 AM - 4:00 PM</span>
+              <span className="text-[#1d1d1f] font-semibold">10:00 AM - 4:00 PM</span>
             </li>
           </ul>
         </div>
 
         {/* Column 3 - Quick Contact */}
         <div className="space-y-4">
-          <h4 className="font-serif font-bold text-stone-200 uppercase tracking-widest text-xs">Get In Touch</h4>
-          <div className="w-8 h-[1px] bg-[#C8A76A]" />
-          <ul className="space-y-3 text-stone-400 text-xs">
+          <h4 className="font-sans text-xs font-bold uppercase tracking-widest text-[#1d1d1f]">The Studio</h4>
+          <div className="w-8 h-[1px] bg-[#1d1d1f]" />
+          <ul className="space-y-3 text-[#76767b] text-xs">
             <li>
-              <strong className="block text-stone-300 font-semibold mb-0.5">Address</strong>
+              <strong className="block text-[#1d1d1f] font-bold uppercase tracking-wider text-[9px] mb-0.5">Address</strong>
               124, Civil Lines, Near Elite Crossing, Jhansi, UP
             </li>
             <li>
-              <strong className="block text-stone-300 font-semibold mb-0.5">Contact Call</strong>
+              <strong className="block text-[#1d1d1f] font-bold uppercase tracking-wider text-[9px] mb-0.5">Phone</strong>
               +91 94500 XXXXX
             </li>
             <li>
-              <strong className="block text-stone-300 font-semibold mb-0.5">Direct Email</strong>
+              <strong className="block text-[#1d1d1f] font-bold uppercase tracking-wider text-[9px] mb-0.5">Email</strong>
               appointments@eaglesaloon.com
             </li>
           </ul>
@@ -140,8 +139,8 @@ export default function Footer() {
       </div>
 
       {/* Copyright row */}
-      <div className="max-w-7xl mx-auto px-6 border-t border-white/5 mt-12 pt-8 text-center text-stone-500 text-[10px] uppercase tracking-wider font-semibold">
-        <p>&copy; {new Date().getFullYear()} Eagle Men's Saloon. All rights reserved. Craftsmanship by Satyendra.</p>
+      <div className="max-w-7xl mx-auto px-6 border-t border-[#e5e5e7] mt-12 pt-8 text-center text-[#a1a1a6] text-[9px] uppercase tracking-wider font-semibold">
+        <p>&copy; {new Date().getFullYear()} Eagle Men's Saloon. All rights reserved. Crafted by Satyendra.</p>
       </div>
     </footer>
   );

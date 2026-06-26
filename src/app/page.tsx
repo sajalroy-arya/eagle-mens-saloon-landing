@@ -1,10 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
+import { Calendar } from "lucide-react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import WhyUs from "@/components/WhyUs";
+import Ritual from "@/components/Ritual";
 import Services from "@/components/Services";
+import Apothecary from "@/components/Apothecary";
 import BeforeAfter from "@/components/BeforeAfter";
 import Barbers from "@/components/Barbers";
 import Experience from "@/components/Experience";
@@ -47,8 +50,14 @@ export default function Home() {
         {/* Section 2: Why Us */}
         <WhyUs />
 
+        {/* Section 2.5: The Ritual (Process) */}
+        <Ritual />
+
         {/* Section 3: Signature Services */}
         <Services onBookOpen={(srvName) => handleOpenBook(srvName)} />
+
+        {/* Section 3.5: Apothecary Products */}
+        <Apothecary />
 
         {/* Section 4: Before & After */}
         <BeforeAfter />
@@ -78,10 +87,22 @@ export default function Home() {
       {/* Footer */}
       <Footer />
 
+      {/* Floating Liquid Glass Booking Button (Desktop) */}
+      <button
+        onClick={() => handleOpenBook()}
+        className="hidden md:flex fixed bottom-8 right-8 z-40 items-center space-x-2.5 px-6 py-4 rounded-full border border-[#e5e5e7] bg-white/75 backdrop-blur-2xl shadow-md hover:shadow-lg hover:scale-103 active:scale-98 transition-all duration-300 group cursor-pointer"
+        style={{
+          boxShadow: "0 10px 30px rgba(0,0,0,0.06), inset 0 0 0 1px rgba(255,255,255,0.2)",
+        }}
+      >
+        <Calendar className="w-4 h-4 text-[#1d1d1f]" />
+        <span className="text-[10px] uppercase tracking-widest font-extrabold text-[#1d1d1f]">Book Session</span>
+      </button>
+
       {/* Sticky Mobile Booking Tab */}
       <StickyMobileBar onBookOpen={() => handleOpenBook()} />
 
-      {/* Interactive Booking Wizard Modal */}
+      {/* Interactive Booking Wizard Modal (Drawer style) */}
       <BookingModal
         isOpen={isBookOpen}
         onClose={handleCloseBook}

@@ -7,34 +7,34 @@ import { Award, Compass, ShieldCheck } from "lucide-react";
 export default function WhyUs() {
   const features = [
     {
-      icon: <Compass className="w-8 h-8 text-[#C8A76A]" />,
+      icon: <Compass className="w-6 h-6 text-[#1d1d1f]" />,
       title: "Master Barbers",
-      desc: "Our stylists view barbering as an art form. Directed by Satyendra with over 15 years of international expertise, we tailor every cut to your specific facial geometry.",
+      desc: "Our stylists view barbering as an art form. Directed by Satyendra with over 15 years of craft expertise, we tailor every cut to your specific facial geometry.",
     },
     {
-      icon: <Award className="w-8 h-8 text-[#C8A76A]" />,
+      icon: <Award className="w-6 h-6 text-[#1d1d1f]" />,
       title: "Premium Products",
-      desc: "We exclusively formulate and style using top-shelf imported products (pomades, beard oils, and clays) that nourish your scalp and skin without harmful chemicals.",
+      desc: "We exclusively formulate and style using small-batch house products (pomades, beard oils, and clays) that nourish your scalp and skin naturally.",
     },
     {
-      icon: <ShieldCheck className="w-8 h-8 text-[#C8A76A]" />,
+      icon: <ShieldCheck className="w-6 h-6 text-[#1d1d1f]" />,
       title: "Hygiene First",
-      desc: "Enjoy complete peace of mind. We implement medical-grade autoclave sterilization for all metal tools, single-use disposable blades, and freshly laundered towels for each guest.",
+      desc: "Enjoy complete peace of mind. We implement medical-grade autoclave sterilization for all metal tools, single-use disposable blades, and fresh towels for each guest.",
     },
   ];
 
   return (
-    <section id="experience" className="py-24 md:py-32 bg-[#FAF8F5]">
+    <section id="experience" className="py-24 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-16 md:mb-24">
-          <span className="text-xs uppercase tracking-widest text-[#C8A76A] font-bold block mb-3">
+          <span className="text-[10px] uppercase tracking-widest text-[#76767b] font-bold block mb-3">
             The Standard of Refinement
           </span>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-[#111111] mb-6">
+          <h2 className="font-sans text-3xl md:text-5xl font-extrabold tracking-tight text-[#1d1d1f] mb-6">
             Why Eagle Saloon
           </h2>
-          <div className="w-12 h-[1px] bg-[#C8A76A] mx-auto" />
+          <div className="w-8 h-[1px] bg-[#1d1d1f] mx-auto" />
         </div>
 
         {/* Feature Grid */}
@@ -42,20 +42,20 @@ export default function WhyUs() {
           {features.map((feat, idx) => (
             <motion.div
               key={feat.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col items-center text-center p-8 rounded-2xl bg-white border border-[#111111]/5 transition-all duration-300 hover:shadow-xl hover:shadow-[#111111]/2 hover:-translate-y-1"
+              transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-col items-center text-center p-8 rounded-2xl bg-[#f5f5f7] border border-[#e5e5e7] transition-all duration-300 hover:shadow-soft hover:-translate-y-0.5"
             >
               {/* Icon Container */}
-              <div className="w-16 h-16 rounded-full bg-[#FAF8F5] border border-[#C8A76A]/20 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-full bg-white border border-[#e5e5e7] flex items-center justify-center mb-6">
                 {feat.icon}
               </div>
-              <h3 className="font-serif text-xl font-bold tracking-tight text-[#111111] mb-4">
+              <h3 className="font-sans text-base font-bold text-[#1d1d1f] mb-3 tracking-tight">
                 {feat.title}
               </h3>
-              <p className="text-stone-500 text-sm font-light leading-relaxed">
+              <p className="text-[#76767b] text-xs font-light leading-relaxed">
                 {feat.desc}
               </p>
             </motion.div>

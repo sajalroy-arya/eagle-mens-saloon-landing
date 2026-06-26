@@ -8,7 +8,6 @@ interface BarbersProps {
   onBookBarber: (barberName: string) => void;
 }
 
-// Custom SVG Instagram Icon to bypass Lucide package version constraints
 const InstagramIcon = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 24 24"
@@ -49,7 +48,7 @@ const BARBER_CREW = [
     role: "Beard Specialist",
     exp: "10 Years",
     specialty: "Classic Beard Sculpting & Scalp Therapy",
-    bio: "Marcus is dedicated to the craft of beard care. He treats facial hair with customized oils, straight-razor detailing, and signature hot stem towels, ensuring a sharp look and healthy skin.",
+    bio: "Marcus is dedicated to the craft of beard care. He treats facial hair with customized oils, straight-razor detailing, and signature hot steam towels, ensuring a sharp look and healthy skin.",
     img: "/assets/marcus_thorne.png",
     instagram: "https://instagram.com/marcus_beard",
   },
@@ -61,13 +60,13 @@ export default function Barbers({ onBookBarber }: BarbersProps) {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-16 md:mb-24">
-          <span className="text-xs uppercase tracking-widest text-[#C8A76A] font-bold block mb-3">
+          <span className="text-[10px] uppercase tracking-widest text-[#76767b] font-bold block mb-3">
             The Craftsmen
           </span>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-[#111111] mb-6">
+          <h2 className="font-sans text-3xl md:text-5xl font-extrabold tracking-tight text-[#1d1d1f] mb-6">
             Meet Our Barbers
           </h2>
-          <div className="w-12 h-[1px] bg-[#C8A76A] mx-auto" />
+          <div className="w-8 h-[1px] bg-[#1d1d1f] mx-auto" />
         </div>
 
         {/* Barbers Editorial Grid */}
@@ -77,69 +76,61 @@ export default function Barbers({ onBookBarber }: BarbersProps) {
             return (
               <div
                 key={barber.name}
-                className={`grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center ${
+                className={`flex flex-col md:flex-row items-center gap-8 md:gap-16 ${
                   isEven ? "" : "md:flex-row-reverse"
                 }`}
               >
-                {/* Image Frame (5 cols) */}
-                <div
-                  className={`md:col-span-5 ${
-                    isEven ? "md:order-1" : "md:order-2"
-                  }`}
-                >
+                {/* Image Frame (5 cols equivalence) */}
+                <div className="w-full md:w-[40%]">
                   <motion.div
                     initial={{ opacity: 0, scale: 0.98 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="relative group rounded-2xl overflow-hidden shadow-lg border border-[#111111]/5"
+                    className="relative group rounded-2xl overflow-hidden shadow-sm border border-[#e5e5e7]"
                   >
-                    <div className="aspect-[4/5] bg-[#2A2A2A] relative">
+                    <div className="aspect-[4/5] bg-[#eeeeef] relative">
                       <img
                         src={barber.img}
                         alt={barber.name}
                         className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-103"
                       />
                       {/* Experience Badge */}
-                      <div className="absolute top-4 left-4 bg-[#111111] text-[#FAF8F5] border border-[#C8A76A]/20 px-3 py-1.5 rounded-lg flex flex-col items-center">
-                        <span className="text-[10px] uppercase tracking-widest font-bold text-[#C8A76A]">Experience</span>
-                        <span className="text-xs font-serif font-bold">{barber.exp}</span>
+                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm border border-[#e5e5e7] px-3 py-1.5 rounded-lg flex flex-col items-center">
+                        <span className="text-[8px] uppercase tracking-wider font-bold text-[#76767b]">Experience</span>
+                        <span className="text-xs font-bold text-[#1d1d1f]">{barber.exp}</span>
                       </div>
                     </div>
                   </motion.div>
                 </div>
 
-                {/* Barber Info (7 cols) */}
-                <div
-                  className={`md:col-span-7 flex flex-col justify-center space-y-6 ${
-                    isEven ? "md:order-2" : "md:order-1"
-                  }`}
-                >
+                {/* Barber Info (7 cols equivalence) */}
+                <div className="w-full md:w-[60%] flex flex-col justify-center space-y-5">
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     className="space-y-4"
                   >
                     <div className="flex items-center space-x-3">
-                      <span className="text-xs uppercase tracking-widest text-[#C8A76A] font-bold">
+                      <span className="text-[9px] uppercase tracking-widest text-[#76767b] font-bold">
                         {barber.name === "Satyendra" ? "Founder" : "Specialist"}
                       </span>
-                      <div className="w-1.5 h-1.5 bg-[#C8A76A] rounded-full" />
-                      <span className="text-xs text-stone-400 font-semibold">{barber.role}</span>
+                      <div className="w-1 h-1 bg-[#d2d2d7] rounded-full" />
+                      <span className="text-[10px] text-[#76767b] font-bold uppercase tracking-wider">{barber.role}</span>
                     </div>
 
-                    <h3 className="font-serif text-3xl md:text-4xl font-bold tracking-tight text-[#111111]">
+                    <h3 className="font-sans text-3xl font-extrabold tracking-tight text-[#1d1d1f]">
                       {barber.name}
                     </h3>
                     
-                    <div className="flex items-center space-x-2 text-stone-500 font-medium text-xs bg-[#FAF8F5] px-3 py-1.5 rounded-full w-fit border border-[#111111]/5">
-                      <Award className="w-3.5 h-3.5 text-[#C8A76A]" />
-                      <span>{barber.specialty}</span>
+                    <div className="flex items-center space-x-2 text-[#76767b] font-medium text-xs bg-[#f5f5f7] px-3 py-1.5 rounded-full w-fit border border-[#e5e5e7]">
+                      <Award className="w-3.5 h-3.5 text-[#1d1d1f]" />
+                      <span className="font-bold text-[10px] uppercase tracking-wider">{barber.specialty}</span>
                     </div>
 
-                    <p className="text-stone-500 text-sm font-light leading-relaxed">
+                    <p className="text-[#76767b] text-xs font-light leading-relaxed">
                       {barber.bio}
                     </p>
 
@@ -147,7 +138,7 @@ export default function Barbers({ onBookBarber }: BarbersProps) {
                       {/* Book CTA */}
                       <button
                         onClick={() => onBookBarber(barber.name)}
-                        className="px-6 py-2.5 bg-[#111111] hover:bg-[#C8A76A] text-white hover:text-[#111111] text-xs uppercase tracking-widest font-bold rounded-lg transition duration-200 active:scale-98 shadow-sm"
+                        className="px-5 py-2.5 bg-[#1d1d1f] hover:bg-[#2A2A2A] text-white text-[10px] uppercase tracking-widest font-bold rounded-full transition duration-200 active:scale-98 shadow-sm"
                       >
                         Book With {barber.name}
                       </button>
@@ -157,7 +148,7 @@ export default function Barbers({ onBookBarber }: BarbersProps) {
                         href={barber.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 border border-[#111111]/10 hover:border-[#C8A76A] hover:bg-stone-50 rounded-lg transition text-[#111111]/70 hover:text-[#C8A76A]"
+                        className="p-2 border border-[#e5e5e7] hover:border-[#1d1d1f] hover:bg-[#f5f5f7] rounded-lg transition text-[#76767b] hover:text-[#1d1d1f]"
                         aria-label={`${barber.name} on Instagram`}
                       >
                         <InstagramIcon className="w-4 h-4" />

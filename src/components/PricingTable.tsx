@@ -40,13 +40,13 @@ export default function PricingTable({ onBookOpen }: PricingProps) {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-16 md:mb-24">
-          <span className="text-xs uppercase tracking-widest text-[#C8A76A] font-bold block mb-3">
+          <span className="text-[10px] uppercase tracking-widest text-[#76767b] font-bold block mb-3">
             Transparent Pricing
           </span>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-[#111111] mb-6">
+          <h2 className="font-sans text-3xl md:text-5xl font-extrabold tracking-tight text-[#1d1d1f] mb-6">
             Grooming Menu
           </h2>
-          <div className="w-12 h-[1px] bg-[#C8A76A] mx-auto" />
+          <div className="w-8 h-[1px] bg-[#1d1d1f] mx-auto" />
         </div>
 
         {/* Directory Grid */}
@@ -57,7 +57,7 @@ export default function PricingTable({ onBookOpen }: PricingProps) {
             {CATEGORIES.map(cat => (
               <div key={cat.name} className="space-y-6">
                 {/* Category Title */}
-                <h3 className="font-serif text-lg font-bold uppercase tracking-wider text-[#C8A76A] border-b border-[#111111]/5 pb-3">
+                <h3 className="font-sans text-xs font-bold uppercase tracking-widest text-[#1d1d1f] border-b border-[#e5e5e7] pb-3">
                   {cat.name}
                 </h3>
                 
@@ -70,18 +70,18 @@ export default function PricingTable({ onBookOpen }: PricingProps) {
                       className="flex justify-between items-baseline group cursor-pointer py-1"
                     >
                       <div className="space-y-1">
-                        <span className="font-medium text-sm text-[#111111] group-hover:text-[#C8A76A] transition-colors duration-250">
+                        <span className="font-bold text-xs text-[#1d1d1f] uppercase tracking-wider group-hover:text-[#0066cc] transition-colors duration-200">
                           {item.name}
                         </span>
-                        <span className="text-[10px] text-stone-400 font-medium block">
+                        <span className="text-[9px] text-[#76767b] font-semibold uppercase tracking-wider block">
                           Duration: {item.duration}
                         </span>
                       </div>
                       
                       {/* Dotted spacer line */}
-                      <div className="flex-1 border-b border-dotted border-stone-200 mx-4 h-2 group-hover:border-[#C8A76A]/40 transition-colors" />
+                      <div className="flex-1 border-b border-dotted border-[#e5e5e7] mx-4 h-2 group-hover:border-[#0066cc]/40 transition-colors" />
                       
-                      <span className="font-serif font-bold text-sm text-[#111111] group-hover:text-[#C8A76A] transition-colors">
+                      <span className="font-sans font-bold text-sm text-[#1d1d1f] group-hover:text-[#0066cc] transition-colors">
                         {item.price}
                       </span>
                     </div>
@@ -92,39 +92,39 @@ export default function PricingTable({ onBookOpen }: PricingProps) {
           </div>
 
           {/* Right Column - Highlighted Package Card (4 cols) */}
-          <div className="lg:col-span-4 bg-[#FAF8F5] border border-[#C8A76A] rounded-2xl p-6 shadow-md relative overflow-hidden flex flex-col justify-between h-full min-h-[420px]">
+          <div className="lg:col-span-4 bg-[#f5f5f7] border border-[#e5e5e7] rounded-2xl p-6 shadow-sm relative overflow-hidden flex flex-col justify-between h-full min-h-[420px]">
             {/* Corner Badge */}
-            <div className="absolute top-0 right-0 bg-[#C8A76A] text-[#111111] font-bold text-[9px] uppercase tracking-widest px-4 py-1.5 rounded-bl-xl shadow-sm">
+            <div className="absolute top-0 right-0 bg-[#1d1d1f] text-white font-bold text-[9px] uppercase tracking-widest px-4 py-1.5 rounded-bl-xl shadow-sm">
               Recommended
             </div>
             
             <div className="space-y-4">
-              <span className="text-[10px] uppercase font-bold tracking-widest text-[#C8A76A]">The Signature Ritual</span>
-              <h3 className="font-serif text-2xl font-bold tracking-tight text-[#111111]">Premium Eagle Package</h3>
-              <div className="border-b border-[#111111]/5 pb-4 mb-4">
-                <span className="font-serif font-bold text-3xl text-[#111111]">₹1,500</span>
-                <span className="text-xs text-stone-400 font-semibold ml-1">/ 75 Min</span>
+              <span className="text-[9px] uppercase font-bold tracking-widest text-[#76767b]">The Signature Ritual</span>
+              <h3 className="font-sans text-2xl font-bold tracking-tight text-[#1d1d1f]">Premium Eagle Package</h3>
+              <div className="border-b border-[#e5e5e7] pb-4 mb-4">
+                <span className="font-sans font-extrabold text-3xl text-[#1d1d1f]">₹1,500</span>
+                <span className="text-xs text-[#76767b] font-semibold ml-1">/ 75 Min</span>
               </div>
               
-              <ul className="space-y-3 text-xs text-stone-600 font-light">
+              <ul className="space-y-3 text-xs text-[#76767b] font-light">
                 <li className="flex items-center">
-                  <Check className="w-3.5 h-3.5 text-[#C8A76A] mr-2" />
+                  <Check className="w-3.5 h-3.5 text-[#1d1d1f] mr-2" />
                   Custom Precision Haircut
                 </li>
                 <li className="flex items-center">
-                  <Check className="w-3.5 h-3.5 text-[#C8A76A] mr-2" />
+                  <Check className="w-3.5 h-3.5 text-[#1d1d1f] mr-2" />
                   Refreshing Wash & Scalp Massage
                 </li>
                 <li className="flex items-center">
-                  <Check className="w-3.5 h-3.5 text-[#C8A76A] mr-2" />
+                  <Check className="w-3.5 h-3.5 text-[#1d1d1f] mr-2" />
                   Bespoke Beard Shaving & Hot Towel
                 </li>
                 <li className="flex items-center">
-                  <Check className="w-3.5 h-3.5 text-[#C8A76A] mr-2" />
+                  <Check className="w-3.5 h-3.5 text-[#1d1d1f] mr-2" />
                   Charcoal Detox Facial Mask
                 </li>
                 <li className="flex items-center">
-                  <Check className="w-3.5 h-3.5 text-[#C8A76A] mr-2" />
+                  <Check className="w-3.5 h-3.5 text-[#1d1d1f] mr-2" />
                   Complementary Gourmet Coffee
                 </li>
               </ul>
@@ -132,7 +132,7 @@ export default function PricingTable({ onBookOpen }: PricingProps) {
 
             <button
               onClick={() => onBookOpen("Premium Eagle Package")}
-              className="w-full mt-8 py-3.5 bg-[#111111] hover:bg-[#C8A76A] text-white hover:text-[#111111] font-bold text-xs uppercase tracking-widest rounded-xl transition duration-200 active:scale-98 shadow-md"
+              className="w-full mt-8 py-3.5 bg-[#1d1d1f] hover:bg-[#2A2A2A] text-white font-bold text-xs uppercase tracking-widest rounded-xl transition duration-200 active:scale-98 shadow-sm"
             >
               Select Package
             </button>

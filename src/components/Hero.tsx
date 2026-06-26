@@ -10,117 +10,105 @@ interface HeroProps {
 
 export default function Hero({ onBookOpen }: HeroProps) {
   return (
-    <section className="relative h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-black text-[#FAF8F5]">
-      {/* Video Loop Background with graceful image fallback */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-45 scale-105"
-          poster="/assets/interior.png"
-        >
-          {/* Silent luxury barber grooming cinematic loop video from Pexels */}
-          <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-barber-shaving-a-man-with-a-razor-41558-large.mp4"
-            type="video/mp4"
-          />
-        </video>
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-black/50 to-black/70 z-10" />
-      </div>
-
-      {/* Hero Content */}
-      <div className="relative z-20 max-w-4xl mx-auto px-6 text-center flex flex-col items-center select-none">
-        {/* Subtle luxury badge */}
-        <motion.span
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-xs uppercase tracking-widest text-[#C8A76A] font-bold border border-[#C8A76A]/30 px-3 py-1 rounded-full bg-[#111111]/60 backdrop-blur-sm mb-6"
-        >
-          The Epitome of Masculine Refinement
-        </motion.span>
-
-        {/* Big Editorial Serif Heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="font-serif text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6 text-white"
-        >
-          Confidence <br />
-          <span className="italic font-light text-[#C8A76A]">Starts Here.</span>
-        </motion.h1>
-
-        {/* Minimal Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="text-stone-300 text-base md:text-lg max-w-xl font-light leading-relaxed mb-10"
-        >
-          Premium Haircuts, Beard Styling & Wedding Grooming Experience in Jhansi, Uttar Pradesh. Hosted by Master Barber Satyendra.
-        </motion.p>
-
-        {/* Actions */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-5 w-full sm:w-auto mb-16"
-        >
-          <button
-            onClick={onBookOpen}
-            className="px-8 py-4 bg-[#C8A76A] hover:bg-[#FAF8F5] hover:text-[#111111] text-[#111111] font-bold text-xs uppercase tracking-widest rounded-lg transition-all duration-300 shadow-lg shadow-[#C8A76A]/10 active:scale-98"
+    <section className="relative min-h-[90dvh] w-full flex items-center justify-center bg-white text-[#1d1d1f] pt-32 pb-20 select-none">
+      <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        {/* Left Column: Typography & Actions */}
+        <div className="lg:col-span-7 flex flex-col items-start text-left">
+          {/* Subtle luxury badge */}
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="text-[10px] uppercase tracking-widest text-[#76767b] font-bold border border-[#e5e5e7] px-3 py-1 rounded-full bg-[#f5f5f7] mb-6"
           >
-            Book Appointment
-          </button>
-          
-          <a
-            href="#services"
-            className="px-8 py-4 bg-transparent border border-white/20 hover:border-white hover:bg-white/5 text-white font-bold text-xs uppercase tracking-widest rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-          >
-            <span>View Services</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
-        </motion.div>
+            Est. 2012 / San Francisco
+          </motion.span>
 
-        {/* Bottom Trust Signifiers */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 0.7 }}
-          className="grid grid-cols-3 gap-6 md:gap-12 border-t border-white/10 pt-8 w-full max-w-2xl text-stone-300"
-        >
-          <div className="flex flex-col items-center">
-            <div className="flex items-center text-[#C8A76A] space-x-0.5 mb-1.5">
-              <Star className="w-3.5 h-3.5 fill-[#C8A76A] stroke-none" />
-              <Star className="w-3.5 h-3.5 fill-[#C8A76A] stroke-none" />
-              <Star className="w-3.5 h-3.5 fill-[#C8A76A] stroke-none" />
-              <Star className="w-3.5 h-3.5 fill-[#C8A76A] stroke-none" />
-              <Star className="w-3.5 h-3.5 fill-[#C8A76A] stroke-none" />
-              <span className="text-xs font-bold text-white ml-1">4.9</span>
+          {/* Big Editorial Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="font-sans text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6 text-[#1d1d1f]"
+          >
+            Structured cuts. <br />
+            <span className="text-[#86868b]">Deliberate craft.</span>
+          </motion.h1>
+
+          {/* Minimal Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="text-[#76767b] text-base md:text-lg max-w-lg font-light leading-relaxed mb-10"
+          >
+            Eagle is a quiet space dedicated to structured haircutting, straight-razor detailing, and house-formulated products. Led by Master Barber Satyendra.
+          </motion.p>
+
+          {/* Actions */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 w-full sm:w-auto mb-12"
+          >
+            <button
+              onClick={onBookOpen}
+              className="px-6 py-3.5 bg-[#1d1d1f] hover:bg-[#2A2A2A] text-white font-medium text-xs uppercase tracking-widest rounded-full transition-all duration-300 active:scale-98 shadow-sm"
+            >
+              Book Session
+            </button>
+            
+            <a
+              href="#services"
+              className="px-6 py-3.5 bg-[#f5f5f7] hover:bg-[#eeeeef] text-[#1d1d1f] font-medium text-xs uppercase tracking-widest rounded-full transition-all duration-300 flex items-center justify-center space-x-2 border border-[#e5e5e7]"
+            >
+              <span>Explore Services</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </motion.div>
+
+          {/* Bottom Trust Indicators */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="flex items-center space-x-6 border-t border-[#e5e5e7] pt-6 w-full max-w-md text-[#76767b]"
+          >
+            <div className="flex items-center space-x-2">
+              <div className="flex items-center text-[#1d1d1f]">
+                <Star className="w-3.5 h-3.5 fill-[#1d1d1f] stroke-none" />
+                <span className="text-xs font-bold ml-1 text-[#1d1d1f]">4.9</span>
+              </div>
+              <span className="text-[10px] uppercase tracking-widest font-semibold">Google Rating</span>
             </div>
-            <span className="text-[10px] uppercase tracking-widest font-bold text-white/50">Google Rating</span>
-          </div>
+            
+            <div className="w-[1px] h-4 bg-[#e5e5e7]" />
+            
+            <span className="text-[10px] uppercase tracking-widest font-semibold">15+ Years Technique</span>
+          </motion.div>
+        </div>
 
-          <div className="flex flex-col items-center border-x border-white/10 px-2">
-            <span className="text-sm font-serif font-bold text-white mb-1">5000+</span>
-            <span className="text-[10px] uppercase tracking-widest font-bold text-white/50">Happy Clients</span>
-          </div>
+        {/* Right Column: Premium Image Card */}
+        <div className="lg:col-span-5 w-full hidden lg:block">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="relative h-[480px] w-full bg-[#f5f5f7] border border-[#e5e5e7] rounded-3xl overflow-hidden shadow-sm"
+          >
+            <img
+              src="/assets/interior.png"
+              alt="Eagle Men's Saloon Interior"
+              className="w-full h-full object-cover opacity-90 transition-transform duration-700 hover:scale-103"
+            />
+            {/* Elegant transparent vignette overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent pointer-events-none" />
+          </motion.div>
+        </div>
 
-          <div className="flex flex-col items-center">
-            <span className="text-xs uppercase font-bold tracking-widest text-[#C8A76A] mb-1">Premium</span>
-            <span className="text-[10px] uppercase tracking-widest font-bold text-white/50">Men's Grooming</span>
-          </div>
-        </motion.div>
       </div>
-
-      {/* Decorative vertical lines */}
-      <div className="absolute left-1/4 top-0 w-[1px] h-full bg-white/5 pointer-events-none hidden md:block" />
-      <div className="absolute right-1/4 top-0 w-[1px] h-full bg-white/5 pointer-events-none hidden md:block" />
     </section>
   );
 }

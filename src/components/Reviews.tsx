@@ -7,7 +7,7 @@ import { Star, ChevronLeft, ChevronRight, Check } from "lucide-react";
 const REVIEWS = [
   {
     name: "Vikramaditya Singh",
-    role: "Senior Advocate, High Court",
+    role: "Senior Advocate",
     rating: 5,
     text: "Finding a barber who truly understands scissor craft is rare. Satyendra is an absolute master of his trade. His signature master session is worth every single Rupee. The lounge environment is quiet, clean, and highly professional.",
   },
@@ -36,41 +36,40 @@ export default function Reviews() {
     setCurrentIdx(prev => (prev - 1 + REVIEWS.length) % REVIEWS.length);
   };
 
-  // Autoplay reviews every 8 seconds
   useEffect(() => {
     const timer = setInterval(handleNext, 8000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section id="reviews" className="py-24 md:py-32 bg-[#FAF8F5] border-t border-[#111111]/5">
+    <section id="reviews" className="py-24 md:py-32 bg-white border-t border-[#e5e5e7]">
       <div className="max-w-4xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-widest text-[#C8A76A] font-bold block mb-3">
+          <span className="text-[10px] uppercase tracking-widest text-[#76767b] font-bold block mb-3">
             Client Testimonials
           </span>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tight text-[#111111] mb-6">
+          <h2 className="font-sans text-3xl md:text-5xl font-extrabold tracking-tight text-[#1d1d1f] mb-6">
             What Our Guests Say
           </h2>
-          <div className="w-12 h-[1px] bg-[#C8A76A] mx-auto mb-6" />
+          <div className="w-8 h-[1px] bg-[#1d1d1f] mx-auto mb-6" />
           
           {/* Google trust badge */}
-          <div className="flex items-center justify-center space-x-2 bg-white px-4 py-2 border border-[#111111]/5 rounded-full w-fit mx-auto shadow-sm">
-            <span className="text-[10px] font-bold text-stone-600 font-sans tracking-wide">Google Rating</span>
-            <div className="flex text-[#C8A76A] space-x-0.5">
-              <Star className="w-3 h-3 fill-[#C8A76A] stroke-none" />
-              <Star className="w-3 h-3 fill-[#C8A76A] stroke-none" />
-              <Star className="w-3 h-3 fill-[#C8A76A] stroke-none" />
-              <Star className="w-3 h-3 fill-[#C8A76A] stroke-none" />
-              <Star className="w-3 h-3 fill-[#C8A76A] stroke-none" />
+          <div className="flex items-center justify-center space-x-2 bg-[#f5f5f7] px-4 py-2 border border-[#e5e5e7] rounded-full w-fit mx-auto shadow-sm">
+            <span className="text-[9px] font-bold text-[#76767b] uppercase tracking-wider">Google Rating</span>
+            <div className="flex text-[#1d1d1f] space-x-0.5">
+              <Star className="w-3 h-3 fill-[#1d1d1f] stroke-none" />
+              <Star className="w-3 h-3 fill-[#1d1d1f] stroke-none" />
+              <Star className="w-3 h-3 fill-[#1d1d1f] stroke-none" />
+              <Star className="w-3 h-3 fill-[#1d1d1f] stroke-none" />
+              <Star className="w-3 h-3 fill-[#1d1d1f] stroke-none" />
             </div>
-            <span className="text-[10px] font-bold text-[#111111]">4.9 / 5.0 (280+ reviews)</span>
+            <span className="text-[10px] font-bold text-[#1d1d1f]">4.9 / 5.0 (280+ reviews)</span>
           </div>
         </div>
 
         {/* Carousel Container */}
-        <div className="relative bg-white p-8 md:p-12 rounded-2xl border border-[#111111]/5 shadow-sm overflow-hidden min-h-[260px] flex flex-col justify-between">
+        <div className="relative bg-[#f5f5f7] p-8 md:p-12 border border-[#e5e5e7] rounded-2xl shadow-sm overflow-hidden min-h-[260px] flex flex-col justify-between">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIdx}
@@ -81,27 +80,27 @@ export default function Reviews() {
               className="space-y-6"
             >
               {/* Star Rating */}
-              <div className="flex text-[#C8A76A] space-x-1">
+              <div className="flex text-[#1d1d1f] space-x-1">
                 {Array.from({ length: REVIEWS[currentIdx].rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-[#C8A76A] stroke-none" />
+                  <Star key={i} className="w-3.5 h-3.5 fill-[#1d1d1f] stroke-none" />
                 ))}
               </div>
 
               {/* Review Text */}
-              <p className="font-serif text-lg md:text-xl italic text-[#111111]/90 leading-relaxed font-light">
+              <p className="font-sans text-base md:text-lg italic text-[#1d1d1f] leading-relaxed font-light">
                 "{REVIEWS[currentIdx].text}"
               </p>
 
               {/* Author Info */}
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-full bg-[#C8A76A]/10 flex items-center justify-center text-[#C8A76A]">
-                  <Check className="w-4 h-4" />
+                <div className="w-8 h-8 rounded-full bg-[#1d1d1f] text-white flex items-center justify-center">
+                  <Check className="w-3.5 h-3.5" />
                 </div>
                 <div>
-                  <h4 className="font-sans text-xs uppercase tracking-widest font-bold text-[#111111]">
+                  <h4 className="font-sans text-[10px] uppercase tracking-widest font-bold text-[#1d1d1f]">
                     {REVIEWS[currentIdx].name}
                   </h4>
-                  <p className="text-[11px] text-stone-400 font-semibold mt-0.5">
+                  <p className="text-[9px] text-[#76767b] font-bold uppercase tracking-wider mt-0.5">
                     {REVIEWS[currentIdx].role}
                   </p>
                 </div>
@@ -110,7 +109,7 @@ export default function Reviews() {
           </AnimatePresence>
 
           {/* Controls */}
-          <div className="flex justify-between items-center mt-8 pt-6 border-t border-[#111111]/5">
+          <div className="flex justify-between items-center mt-8 pt-6 border-t border-[#e5e5e7]">
             {/* Dots */}
             <div className="flex space-x-2">
               {REVIEWS.map((_, idx) => (
@@ -118,7 +117,7 @@ export default function Reviews() {
                   key={idx}
                   onClick={() => setCurrentIdx(idx)}
                   className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                    currentIdx === idx ? "w-4 bg-[#C8A76A]" : "bg-stone-200"
+                    currentIdx === idx ? "w-4 bg-[#1d1d1f]" : "bg-[#d2d2d7]"
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />
@@ -129,17 +128,17 @@ export default function Reviews() {
             <div className="flex space-x-2">
               <button
                 onClick={handlePrev}
-                className="p-2 border border-[#111111]/10 hover:border-[#C8A76A] rounded-lg transition active:scale-95 text-[#111111]/70 hover:text-[#C8A76A]"
+                className="p-2 border border-[#e5e5e7] hover:border-[#1d1d1f] rounded-lg bg-white transition active:scale-95 text-[#76767b] hover:text-[#1d1d1f]"
                 aria-label="Previous review"
               >
-                <ChevronLeft className="w-4 h-4" />
+                <ChevronLeft className="w-3.5 h-3.5" />
               </button>
               <button
                 onClick={handleNext}
-                className="p-2 border border-[#111111]/10 hover:border-[#C8A76A] rounded-lg transition active:scale-95 text-[#111111]/70 hover:text-[#C8A76A]"
+                className="p-2 border border-[#e5e5e7] hover:border-[#1d1d1f] rounded-lg bg-white transition active:scale-95 text-[#76767b] hover:text-[#1d1d1f]"
                 aria-label="Next review"
               >
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-3.5 h-3.5" />
               </button>
             </div>
           </div>
