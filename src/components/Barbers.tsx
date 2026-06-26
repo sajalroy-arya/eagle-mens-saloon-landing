@@ -41,7 +41,7 @@ const BARBER_CREW = [
     exp: "8 Years",
     specialty: "Modern Fades & Creative Color Work",
     bio: "Alex is the crew's modern styling virtuoso. His specialization lies in high-contrast skin fades, textured undercuts, and custom styling that matches the contemporary aesthetic of college students and professionals.",
-    img: "/assets/interior.png",
+    img: "/assets/alex_mercer.png",
     instagram: "https://instagram.com/alex_hair",
   },
   {
@@ -50,7 +50,7 @@ const BARBER_CREW = [
     exp: "10 Years",
     specialty: "Classic Beard Sculpting & Scalp Therapy",
     bio: "Marcus is dedicated to the craft of beard care. He treats facial hair with customized oils, straight-razor detailing, and signature hot stem towels, ensuring a sharp look and healthy skin.",
-    img: "/assets/interior.png",
+    img: "/assets/marcus_thorne.png",
     instagram: "https://instagram.com/marcus_beard",
   },
 ];

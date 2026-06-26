@@ -64,7 +64,7 @@ export default function BeforeAfter() {
           {/* BEFORE IMAGE (Bottom Layer - Full Width) */}
           <div className="absolute inset-0 w-full h-full bg-[#2A2A2A]">
             <img
-              src="/assets/interior.png" // We will replace with before_transform.png or generate it
+              src="/assets/before_transform.png"
               alt="Before grooming treatment"
               className="w-full h-full object-cover filter grayscale contrast-125"
             />
@@ -82,7 +82,7 @@ export default function BeforeAfter() {
             <div className="absolute inset-0 w-[450px] sm:w-[832px] h-[300px] sm:h-[450px]">
               {/* Ensure image remains same width as container, otherwise it scales down */}
               <img
-                src="/assets/satyendra.png" // We will replace with after_transform.png or generate it
+                src="/assets/after_transform.png"
                 alt="After grooming treatment"
                 className="w-full h-full object-cover"
                 style={{ width: containerRef.current?.offsetWidth || "100%" }}
